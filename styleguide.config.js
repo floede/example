@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 	title: 'React Style Guide Example',
 	defaultExample: true,
@@ -12,6 +14,7 @@ module.exports = {
 				{
 					test: /\.css$/,
 					loader: 'style-loader!css-loader?modules&importLoaders=1',
+					include: path.join(__dirname, 'src/styles'),
 				},
 			],
 		},
